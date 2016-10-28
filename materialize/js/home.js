@@ -271,10 +271,10 @@ $(document).ready(function()
 				// hnotbar = hnotbar.toFixed(2);
 				$("#hnotbar").html(hnotbar);
 
-				var hgbar = avalue +  bvalue  ;
+				var hgbar = hnotbar * ( parseFloat(avalue) + ( parseFloat(bvalue) * ( avgsunshine / capsnbar ) ) );
 				// hgbar = hgbar.toFixed(2);
 				$("#hgbar").html(hgbar);
-				alert(hgbar)
+				// alert(hgbar)
 
 				var hdbar = hgbar * ( 1.354 - ( 1.570 * (hgbar/hnotbar) ) );
 				hdbar = hdbar.toFixed(2);
