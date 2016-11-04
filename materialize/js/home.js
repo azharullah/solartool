@@ -156,7 +156,7 @@ $(document).ready(function()
   		})
 
   		$("#place_custom").change(function(){
-  			alert($("#place_custom").val());
+  			// alert($("#place_custom").val());
   			var newplacetext = $("#place_custom").val();
   			var geocoder =  new google.maps.Geocoder();
 	  		geocoder.geocode( { 'address': newplacetext }, function(results, status) 
