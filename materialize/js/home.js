@@ -1,5 +1,8 @@
 $(document).ready(function() 
 {
+
+    $(".results").css("visibility","hidden");
+    $(".opthidden").css("visibility","hidden");
     
     $('select').material_select();
 
@@ -17,107 +20,125 @@ $(document).ready(function()
   			{
   				var a = 0.28;
   				var b = 0.48;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 2)
   			{
   				var a = 0.18;
   				var b = 0.64;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 3)
   			{
   				var a = 0.28;
   				var b = 0.47;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 4)
   			{
   				var a = 0.30;
   				var b = 0.44;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 5)
   			{
   				var a = 0.30;
   				var b = 0.48;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 6)
   			{
   				var a = 0.33;
   				var b = 0.46;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 7)
   			{
   				var a = 0.32;
   				var b = 0.55;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 8)
   			{
   				var a = 0.28;
   				var b = 0.42;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 9)
   			{
   				var a = 0.27;
   				var b = 0.43;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 10)
   			{
   				var a = 0.26;
   				var b = 0.39;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 11)
   			{
   				var a = 0.27;
   				var b = 0.50;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 12)
   			{
   				var a = 0.25;
   				var b = 0.57;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 13)
   			{
   				var a = 0.31;
   				var b = 0.43;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 14)
   			{
   				var a = 0.22;
   				var b = 0.57;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 15)
   			{
   				var a = 0.35;
   				var b = 0.40;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 16)
   			{
   				var a = 0.37;
   				var b = 0.39;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 17)
   			{
   				var a = 0.28;
   				var b = 0.47;
-  				$("#place_custom").prop("disabled",true)
+  				$("#place_custom").prop("disabled",true);
+          $(".opthidden").css("visibility","hidden");
   			}
   			if(placeval == 18)
   			{
   				$("#place_custom").prop("disabled",false);
+          $("#place_custom").css("visibility","visible");
   			}
 
   		var geocoder =  new google.maps.Geocoder();
@@ -283,6 +304,8 @@ $(document).ready(function()
 				var hb = hgbar - hdbar;
 				// hb = hb.toFixed(2);
 				$("#hb").html(hb);
+
+        $(".results").css("visibility","visible");
 		}
 		else
 		{

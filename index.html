@@ -46,7 +46,7 @@
 	    		<label>Place</label>
 	  		</div>
 
-	  		<div class="input-field col s6 m2 l2">
+	  		<div class="input-field col s6 m2 l2 opthidden">
           		<input disabled id="place_custom" type="text" class="validate">
           		<label for="place_custom">Place</label>
         	</div>
@@ -90,7 +90,7 @@
 
         <div class="row">
 
-        	<button class="btn waves-effect waves-light center-align" id="submit" type="submit" name="action">Submit
+        	<button class="btn waves-effect waves-light" style="margin-left: 30%;" id="submit" type="submit" name="action">Submit
 		    	<i class="material-icons right">send</i>
 		  	</button>
 
@@ -99,23 +99,63 @@
 	  	<hr>
 
 	  	<div class="results">
-	  	
-	  		<p><!-- delta --> &delta; = <span id="delta">  </span></p>
-	  		<p><!-- omega --> &Omega; = <span id="omega">  </span></p>
-	  		<p><!-- capsnbar --> <span class="overline">N</span> = <span id="capsnbar">  </span></p>
-	  		<p><!-- hnotbar --> <span class="overline">H</span><sub>o</sub> = <span id="hnotbar">  </span></p>
-	  		<p><!-- hgbar --> <span class="overline">H</span><sub>g</sub> = <span id="hgbar">  </span></p>
-	  		<p><!-- hdbar --> <span class="overline">H</span><sub>d</sub> = <span id="hdbar">  </span></p>
-	  		<p><!-- hb --> H<sub>b</sub> = <span id="hb">  </span></p>
 
-	  	</div>
+	  		<h4 class="center-align">Results</h4>
+
+		  	<table class="bordered striped centered responsive-table">
+		  		<thead>
+				  	<tr>
+				    	<th>Parameter</th>
+				    	<th>Value</th>
+				  	</tr>
+				</thead>
+				<tbody>
+				  	<tr>
+				    	<td>&delta;</td>
+				    	<td><span id="delta">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td>&Omega;</td>
+				    	<td><span id="omega">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td><span class="overline">N</span></td>
+				    	<td><span id="capsnbar">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td><span class="overline">H</span><sub>o</sub></td>
+				    	<td><span id="hnotbar">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td><span class="overline">H</span><sub>g</sub></td>
+				    	<td><span id="hgbar">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td><span class="overline">H</span><sub>d</sub></td>
+				    	<td><span id="hdbar"></td>
+				  	</tr>
+				  	<tr>
+				    	<td>H<sub>b</sub></td>
+				    	<td><span id="hb"></td>
+				  	</tr>
+				</tbody>
+			</table>
+
+		</div>
+	  	
+	  	
+	  		<!-- <p>&delta; = <span id="delta">  </span></p>
+	  		<p>&Omega; = <span id="omega">  </span></p>
+	  		<p><span class="overline">N</span> = <span id="capsnbar">  </span></p>
+	  		<p><span class="overline">H</span><sub>o</sub> = <span id="hnotbar">  </span></p>
+	  		<p><span class="overline">H</span><sub>g</sub> = <span id="hgbar">  </span></p>
+	  		<p><span class="overline">H</span><sub>d</sub> = <span id="hdbar">  </span></p>
+	  		<p>H<sub>b</sub> = <span id="hb">  </span></p> -->
 
 		<script type="text/javascript" src="materialize/js/jquery.js"></script>
   		<script type="text/javascript" src="materialize/js/home.js"></script>
-		<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCki3j-AqdRY2aNoVFTOVLV0lL8o7JDCjU&callback=initMap"></script> -->
 		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCki3j-AqdRY2aNoVFTOVLV0lL8o7JDCjU"
-  type="text/javascript"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCki3j-AqdRY2aNoVFTOVLV0lL8o7JDCjU" type="text/javascript"></script>
 
 	</body>
 
