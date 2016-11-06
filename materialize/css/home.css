@@ -2,3 +2,27 @@
 {
 	text-decoration: overline;
 }
+
+body
+{
+	background-image: url("../../img/back.jpeg");
+	background-size: cover;
+}
+
+h2
+{
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
+.row
+{
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
+
+h3
+{
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}

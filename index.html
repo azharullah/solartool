@@ -3,11 +3,11 @@
 <html>
 	
 	<head>
-		<title>Solar Radiation Tool</title>
+		<title>Solar Radiation Intensity Calculator</title>
 		<!--Import Google Icon Font-->
       	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       	<!--Import materialize.css-->
-      	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
       	<link rel="stylesheet" type="text/css" href="materialize/css/home.css">
 
       	<!--Let browser know website is optimized for mobile-->
@@ -17,13 +17,13 @@
 
 	<body class="container">
 
-		<h2 class="center-align blue-text"> Solar Radiation Calculation Tool </h2>
+		<h2 class="center-align blue-text"> Solar Radiation Intensity Calculator </h2>
 
 		<div class="row">
 			
 			<div class="input-field col s12 m6 l3">
 	    		<select id="placelist">
-		      		<option value="0" disabled selected>Choose your option</option>
+		      		<option value="0" disabled selected>Choose your location</option>
 		      		<option value="1">Ahmedabad</option>
 		      		<option value="2">Bangalore</option>
 		      		<option value="3">Bhavnagar</option>
@@ -65,23 +65,23 @@
 
 	  	<div class="row">
 	  		
-	  		<div class="input-field col s3 m2 l1">
+	  		<div class="input-field col s4 m4 l2">
           		<input id="lat" value="00.000" type="text" class="validate">
           		<label for="lat">Latitude</label>
         	</div>
-        	<div class="input-field col s3 m2 l1">
+        	<div class="input-field col s4 m4 l2">
           		<input id="long" value="00.000" type="text" class="validate">
           		<label for="long">Longitude</label>
         	</div>
-        	<div class="input-field col s3 m2 l1">
+        	<div class="input-field col s4 m4 l2">
           		<input id="a" value="0.00" type="text" class="validate">
           		<label for="a">a</label>
         	</div>
-        	<div class="input-field col s3 m2 l1">
+        	<div class="input-field col s4 m4 l2">
           		<input id="b" value="0.00" type="text" class="validate">
           		<label for="b">b</label>
         	</div>
-        	<div class="input-field col s3 m2 l1">
+        	<div class="input-field col s4 m4 l2">
           		<input id="numdays" value="0" type="number" class="validate">
           		<label for="numdays">n</label>
         	</div>
@@ -90,7 +90,7 @@
 
         <div class="row">
 
-        	<button class="btn waves-effect waves-light" style="margin-left: 30%;" id="submit" type="submit" name="action">Submit
+        	<button class="btn waves-effect waves-light" style="margin-left: 35%;" id="submit" type="submit" name="action">Submit
 		    	<i class="material-icons right">send</i>
 		  	</button>
 
@@ -98,9 +98,9 @@
 
 	  	<hr>
 
-	  	<div class="results" style="visibility:hidden">
+	  	<div class="results">
 
-	  		<h4 class="center-align">Results</h4>
+	  		<h3 class="center-align"><i class="small material-icons">reorder</i>&nbsp;Results</h3>
 
 		  	<table class="bordered striped centered responsive-table">
 		  		<thead>

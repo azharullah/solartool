@@ -1,7 +1,7 @@
 $(document).ready(function() 
 {
 
-    $(".results").css("visibility","hidden");
+    // $(".results").css("visibility","hidden");
     $(".opthidden").css("visibility","hidden");
     
     $('select').material_select();
@@ -306,6 +306,10 @@ $(document).ready(function()
 				$("#hb").html(hb);
 
         $(".results").css("visibility","visible");
+
+        // Scroll to bottom
+        window.scrollTo(0,document.body.scrollHeight);
+
 		}
 		else
 		{
