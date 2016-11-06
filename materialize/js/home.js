@@ -278,7 +278,7 @@ $(document).ready(function()
 				$("#omega").html(omega + " degrees");
 
 				var capsnbar = (2/15) * omega;
-				$("#capsnbar").html(capsnbar + " degrees");
+				$("#capsnbar").html(capsnbar + " hours");
 
 				var cons = 3600 * (24 / Math.PI) * 1.367;
 				// cons = cons.toFixed(2);
@@ -290,20 +290,20 @@ $(document).ready(function()
 				// omegasinphisindelta = omegasinphisindelta.toFixed(2);
 				var hnotbar = cons * middlecons * (cosdeltacosphicosomega + omegasinphisindelta);
 				// hnotbar = hnotbar.toFixed(2);
-				$("#hnotbar").html(hnotbar);
+				$("#hnotbar").html(hnotbar + " kJ/m<sup>2</sup>-day");
 
 				var hgbar = hnotbar * ( parseFloat(avalue) + ( parseFloat(bvalue) * ( avgsunshine / capsnbar ) ) );
 				// hgbar = hgbar.toFixed(2);
-				$("#hgbar").html(hgbar);
+				$("#hgbar").html(hgbar + " kJ/m<sup>2</sup>-day");
 				// alert(hgbar)
 
 				var hdbar = hgbar * ( 1.354 - ( 1.570 * (hgbar/hnotbar) ) );
 				hdbar = hdbar.toFixed(2);
-				$("#hdbar").html(hdbar);
+				$("#hdbar").html(hdbar + " kJ/m<sup>2</sup>-day");
 
 				var hb = hgbar - hdbar;
 				// hb = hb.toFixed(2);
-				$("#hb").html(hb);
+				$("#hb").html(hb + " kJ/m<sup>2</sup>-day");
 
         $(".results").css("visibility","visible");
 

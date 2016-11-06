@@ -25,4 +25,52 @@ h3
 {
 	margin-top: 5vh;
 	margin-bottom: 5vh;
+	color: rgba(22, 18, 152, 0.87);
+}
+
+th
+{
+	color: #004aff;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+
+.mytable 
+{
+	border:none;
+	border-collapse: collapse;
+}
+
+.mytable td 
+{
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+.mytable td:first-child 
+{
+	border-left: none;
+}
+
+.mytable td:last-child 
+{
+	border-right: none;
+}
+
+.mytable td:nth-child(1) 
+{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.mytable td:nth-child(2) 
+{
+	font-size: 17px;
+}
+
+.mytable td:nth-child(3) 
+{
+	font-size: 17px;
+	font-weight: bold;
 }
