@@ -1,7 +1,13 @@
 $(document).ready(function() 
 {
 
-    // $(".results").css("visibility","hidden");
+    var datePicker = $('.datepicker').pickadate({
+        onSet: function () {
+            this.close();
+        }
+    });
+
+    $(".results").css("visibility","hidden");
     $(".opthidden").css("visibility","hidden");
     
     $('select').material_select();
