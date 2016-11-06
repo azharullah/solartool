@@ -1,9 +1,12 @@
 $(document).ready(function() 
 {
 
-    var datePicker = $('.datepicker').pickadate({
-        onSet: function () {
-            this.close();
+  $('.datepicker').pickadate({
+        onSet: function( arg ){
+            if ( 'select' in arg )
+            { //prevent closing on selecting month/year
+                this.close();
+            }
         }
     });
 
@@ -15,6 +18,9 @@ $(document).ready(function()
     $('.datepicker').pickadate({
     	selectMonths: true, // Creates a dropdown to control month
     	selectYears: 15 // Creates a dropdown of 15 years to control year
+      // OnSet: function(){
+      //   $(".picker__close").click();
+      // }
   	});
 
   	$("#placelist").change(function(){
