@@ -281,7 +281,7 @@ $(document).ready(function()
 		  		// var avgsunshine = 7;
 		  		var avgsunshine = $("#nbar").val();
 
-		  		var delta = 23.45 * Math.sin( ((360*(284+smalln))/365) * (Math.PI/180) );
+		  		var delta = 23.45 * Math.sin( ((parseInt(360) * (parseInt(284)+parseInt(smalln))) / parseInt(365)) * (Math.PI/180) );
 		  		delta = delta.toFixed(2);
 		  		$("#delta").html(delta + " degrees");
 
@@ -294,9 +294,9 @@ $(document).ready(function()
 
 				var cons = 3600 * (24 / Math.PI) * 1.367;
 				// cons = cons.toFixed(2);
-				var middlecons = 1 + (0.033 * Math.cos(360 * smalln / 365));
+				var middlecons = 1 + (0.033 * Math.cos( (360 * smalln / 365) * (Math.PI/180) ));
 				// middlecons = middlecons.toFixed(2);
-				var cosdeltacosphicosomega = (Math.cos(latitude*Math.PI/180) * Math.cos(delta*Math.PI/180) * Math.sin(omega*Math.PI/180) );
+				var cosdeltacosphicosomega = Math.cos(latitude*Math.PI/180) * Math.cos(delta*Math.PI/180) * Math.sin(omega*Math.PI/180) ;
 				// cosdeltacosphicosomega = cosdeltacosphicosomega.toFixed(2);
 				var omegasinphisindelta = omega*(Math.PI/180) * Math.sin((latitude*Math.PI/180)) * Math.sin(delta*Math.PI/180);
 				// omegasinphisindelta = omegasinphisindelta.toFixed(2);
