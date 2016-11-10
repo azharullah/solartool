@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Solar Radiation Intensity Calculator</title>
+		<!--Import Google Icon Font-->
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      	<!--Import materialize.css-->
+      	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+      	<link rel="stylesheet" type="text/css" href="materialize/css/home.css">
+
+      	<!--Let browser know website is optimized for mobile-->
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	</head>
+
+	<body class="container">
+
+		<h4 class="center-align blue-text"> Solar Radiation Intensity Calculator </h4>
+
+		<div class="row">
+			
+			<div class="input-field col s12 m6 l3">
+	    		<select id="placelist">
+		      		<option value="0" disabled selected>Choose your location</option>
+		      		<option value="1">Ahmedabad</option>
+		      		<option value="2">Bangalore</option>
+		      		<option value="3">Bhavnagar</option>
+		      		<option value="4">Chennai</option>
+		      		<option value="5">Goa</option>
+		      		<option value="6">Jodhpur</option>
+		      		<option value="7">Kodaikanal</option>
+		      		<option value="8">Kolkata</option>
+		      		<option value="9">Mangalore</option>
+		      		<option value="10">Minicoy</option>
+		      		<option value="11">Nagpur</option>
+		      		<option value="12">New Delhi</option>
+		      		<option value="13">Pune</option>
+		      		<option value="14">Shillong</option>
+		      		<option value="15">Srinagar</option>
+		      		<option value="16">Trivandrum</option>
+		      		<option value="17">Vishakhapatnam</option>
+		      		<option value="18">Other</option>
+	    		</select>
+	    		<label>Place</label>
+	  		</div>
+
+	  		<div class="input-field col s6 m2 l2 opthidden">
+          		<input disabled id="place_custom" type="text" class="validate">
+          		<label for="place_custom">Place</label>
+        	</div>
+
+	  		<div class="col s12 m6 l3">
+		  		<label for="day">Day of the year</label>
+		  		<input id="day" type="date" class="datepicker">
+	  		</div>
+
+	  		<div class="input-field col s6 m2 l2">
+          		<input id="nbar" value="0" type="number" class="validate" min="0" max="24">
+          		<label for="nbar">Avg sunshine hours</label>
+        	</div>
+
+	  	</div>
+
+	  	<div class="row">
+	  		
+	  		<div class="input-field col s4 m4 l2">
+          		<input id="lat" value="00.000" type="text" class="validate">
+          		<label for="lat">Latitude</label>
+        	</div>
+        	<div class="input-field col s4 m4 l2">
+          		<input id="long" value="00.000" type="text" class="validate">
+          		<label for="long">Longitude</label>
+        	</div>
+        	<div class="input-field col s4 m4 l2">
+          		<input id="a" value="0.00" type="text" class="validate">
+          		<label for="a">a</label>
+        	</div>
+        	<div class="input-field col s4 m4 l2">
+          		<input id="b" value="0.00" type="text" class="validate">
+          		<label for="b">b</label>
+        	</div>
+        	<div class="input-field col s4 m4 l2">
+          		<input id="numdays" value="0" type="number" class="validate" min="0" max="366">
+          		<label for="numdays">n</label>
+        	</div>
+
+        </div>
+
+        <div class="row">
+
+        	<button class="btn waves-effect waves-light" style="margin-left: 35%;" id="submit" type="submit" name="action">Submit
+		    	<i class="material-icons right">send</i>
+		  	</button>
+
+	  	</div>
+
+	  	<hr>
+
+	  	<div class="results">
+
+	  		<h5 class="results-head center-align"><i class="tiny material-icons">reorder</i>&nbsp;Results</h5>
+
+		  	<table class="mytable bordered striped centered">
+		  		<thead>
+				  	<tr>
+				    	<th>Parameter</th>
+				    	<!--<th>Descripton</th>-->
+				    	<th>Value</th>
+				  	</tr>
+				</thead>
+				<tbody>
+				  	<tr>
+				    	<td>&delta;</td>
+				    	<!--<td>Declination Angle</td>-->
+				    	<td><span id="delta">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td>&Omega;</td>
+				    	<!--<td>Hour Angle</td>-->
+				    	<td><span id="omega">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td><span class="overline">N</span></td>
+				    	<!--<td>Monthly average maximum possible hours of daily sunshine</td>-->
+				    	<td><span id="capsnbar">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td><span class="overline">H</span><sub>o</sub></td>
+				    	<!--<td>Monthly average, daily, extraterrestial radiation</td>-->
+				    	<td><span id="hnotbar">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td><span class="overline">H</span><sub>g</sub></td>
+				    	<!--<td>Monthly average, daily, total radiation</td>-->
+				    	<td><span id="hgbar">  </span></td>
+				  	</tr>
+				  	<tr>
+				    	<td><span class="overline">H</span><sub>d</sub></td>
+				    	<!--<td>Monthly average, daily, diffused radiation</td>-->
+				    	<td><span id="hdbar"></td>
+				  	</tr>
+				  	<tr>
+						<td><span class="overline">H</span><sub>b</sub></td>
+				    	<!--<td>Monthly average, daily, beam radiation</td>-->
+				    	<td><span id="hb"></td>
+				  	</tr>
+				</tbody>
+			</table>
+
+		</div>
+	  	
+	  	
+	  		<!-- <p>&delta; = <span id="delta">  </span></p>
+	  		<p>&Omega; = <span id="omega">  </span></p>
+	  		<p><span class="overline">N</span> = <span id="capsnbar">  </span></p>
+	  		<p><span class="overline">H</span><sub>o</sub> = <span id="hnotbar">  </span></p>
+	  		<p><span class="overline">H</span><sub>g</sub> = <span id="hgbar">  </span></p>
+	  		<p><span class="overline">H</span><sub>d</sub> = <span id="hdbar">  </span></p>
+	  		<p>H<sub>b</sub> = <span id="hb">  </span></p> -->
+
+		<script type="text/javascript" src="materialize/js/jquery.js"></script>
+  		<script type="text/javascript" src="materialize/js/home.js"></script>
+		<script type="text/javascript" src="materialize/js/materialize.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCki3j-AqdRY2aNoVFTOVLV0lL8o7JDCjU" type="text/javascript"></script>
+
+	</body>
+
+</html>

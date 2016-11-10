@@ -1,0 +1,78 @@
+.overline
+{
+	text-decoration: overline;
+}
+
+body
+{
+	background-image: url("../../img/back.jpeg");
+	background-size: cover;
+}
+
+h4
+{
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	color: #FFFFFF;
+    text-shadow: -1px 0 0 #000000, 1px 1px 0 #000000,
+             2px -1px 0 #000000, 3px 0 0 #000000;
+}
+
+.results
+{
+	margin-bottom: 1vh;
+}
+
+.results-head
+{
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	color: rgba(22, 18, 152, 0.810);
+}
+
+th
+{
+	color: #004aff;
+	font-size: 15px;
+	font-weight: bolder;
+}
+
+
+.mytable 
+{
+	border:none;
+	border-collapse: collapse;
+}
+
+.mytable td 
+{
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+.mytable td:first-child 
+{
+	border-left: none;
+}
+
+.mytable td:last-child 
+{
+	border-right: none;
+}
+
+.mytable td:nth-child(1) 
+{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.mytable td:nth-child(2) 
+{
+	font-size: 10px;
+}
+
+.mytable td:nth-child(3) 
+{
+	font-size: 10px;
+	font-weight: bold;
+}
